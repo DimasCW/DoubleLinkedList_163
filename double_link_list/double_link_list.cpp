@@ -74,6 +74,14 @@ bool DoubleLinkedList::search(int rollNo, Node** previous, Node** current) {
 	*current = START;//step 1.b
 	while (*current != NULL && (*current)->noMhs!= rollNo)
 	{
-		*previous = *current;//step
+		*previous = *current;//step 1.d
+		*current = (*current)->next;//step 1.e
 	}
+	return (*current != NULL);
+}
+
+bool DoubleLinkedList::deleteNode(int rollNo) {
+	Node* previous, * current;
+	previous = current = NULL;
+	if (search(rollNo, ))
 }
