@@ -43,6 +43,11 @@ void DoubleLinkedList::addNode() {
 			return;
 		}
 		newNode->next = START;//step 3
+		if (START != NULL)
+			START->prev = newNode; //step4
+		newNode->prev = NULL;
+		START = newNode;//step 6
+		return;
 	}
 
 }
